@@ -1,0 +1,70 @@
+<html>
+<head>
+<title>practice_3.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #2aacb8;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+practice_3.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">math</span>
+
+
+<span class="s0">def </span><span class="s1">sin_taylor</span><span class="s2">(</span><span class="s1">x</span><span class="s2">, </span><span class="s1">n</span><span class="s2">):</span>
+    <span class="s1">result </span><span class="s2">= </span><span class="s3">0</span>
+    <span class="s1">sign </span><span class="s2">= </span><span class="s3">1</span>
+    <span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">range</span><span class="s2">(</span><span class="s1">n</span><span class="s2">):</span>
+        <span class="s1">term </span><span class="s2">= </span><span class="s1">sign </span><span class="s2">* (</span><span class="s1">x </span><span class="s2">** (</span><span class="s3">2 </span><span class="s2">* </span><span class="s1">i </span><span class="s2">+ </span><span class="s3">1</span><span class="s2">)) / </span><span class="s1">math</span><span class="s2">.</span><span class="s1">factorial</span><span class="s2">(</span><span class="s3">2 </span><span class="s2">* </span><span class="s1">i </span><span class="s2">+ </span><span class="s3">1</span><span class="s2">)</span>
+        <span class="s0">yield </span><span class="s1">term</span>
+        <span class="s1">result </span><span class="s2">+= </span><span class="s1">term</span>
+        <span class="s1">sign </span><span class="s2">*= -</span><span class="s3">1</span>
+
+
+<span class="s0">def </span><span class="s1">cos_taylor</span><span class="s2">(</span><span class="s1">x</span><span class="s2">, </span><span class="s1">n</span><span class="s2">):</span>
+    <span class="s1">result </span><span class="s2">= </span><span class="s3">0</span>
+    <span class="s1">sign </span><span class="s2">= </span><span class="s3">1</span>
+    <span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">range</span><span class="s2">(</span><span class="s1">n</span><span class="s2">):</span>
+        <span class="s1">term </span><span class="s2">= </span><span class="s1">sign </span><span class="s2">* (</span><span class="s1">x </span><span class="s2">** (</span><span class="s3">2 </span><span class="s2">* </span><span class="s1">i</span><span class="s2">)) / </span><span class="s1">math</span><span class="s2">.</span><span class="s1">factorial</span><span class="s2">(</span><span class="s3">2 </span><span class="s2">* </span><span class="s1">i</span><span class="s2">)</span>
+        <span class="s0">yield </span><span class="s1">term</span>
+        <span class="s1">result </span><span class="s2">+= </span><span class="s1">term</span>
+        <span class="s1">sign </span><span class="s2">*= -</span><span class="s3">1</span>
+
+
+<span class="s0">def </span><span class="s1">exp_taylor</span><span class="s2">(</span><span class="s1">x</span><span class="s2">, </span><span class="s1">n</span><span class="s2">):</span>
+    <span class="s1">result </span><span class="s2">= </span><span class="s3">0</span>
+    <span class="s0">for </span><span class="s1">i </span><span class="s0">in </span><span class="s1">range</span><span class="s2">(</span><span class="s1">n</span><span class="s2">):</span>
+        <span class="s1">term </span><span class="s2">= (</span><span class="s1">x</span><span class="s2">**</span><span class="s1">i</span><span class="s2">) / </span><span class="s1">math</span><span class="s2">.</span><span class="s1">factorial</span><span class="s2">(</span><span class="s1">i</span><span class="s2">)</span>
+        <span class="s0">yield </span><span class="s1">term</span>
+        <span class="s1">result </span><span class="s2">+= </span><span class="s1">term</span>
+
+
+<span class="s1">x </span><span class="s2">= </span><span class="s3">1</span>
+<span class="s1">n </span><span class="s2">= </span><span class="s3">5</span>
+
+<span class="s1">sin_series </span><span class="s2">= </span><span class="s1">list</span><span class="s2">(</span><span class="s1">sin_taylor</span><span class="s2">(</span><span class="s1">x</span><span class="s2">, </span><span class="s1">n</span><span class="s2">))</span>
+<span class="s1">cos_series </span><span class="s2">= </span><span class="s1">list</span><span class="s2">(</span><span class="s1">cos_taylor</span><span class="s2">(</span><span class="s1">x</span><span class="s2">, </span><span class="s1">n</span><span class="s2">))</span>
+<span class="s1">exp_series </span><span class="s2">= </span><span class="s1">list</span><span class="s2">(</span><span class="s1">exp_taylor</span><span class="s2">(</span><span class="s1">x</span><span class="s2">, </span><span class="s1">n</span><span class="s2">))</span>
+
+<span class="s1">sin_sum </span><span class="s2">= </span><span class="s1">sum</span><span class="s2">(</span><span class="s1">sin_series</span><span class="s2">)</span>
+<span class="s1">cos_sum </span><span class="s2">= </span><span class="s1">sum</span><span class="s2">(</span><span class="s1">cos_series</span><span class="s2">)</span>
+<span class="s1">exp_sum </span><span class="s2">= </span><span class="s1">sum</span><span class="s2">(</span><span class="s1">exp_series</span><span class="s2">)</span>
+
+<span class="s1">sin_difference </span><span class="s2">= </span><span class="s1">math</span><span class="s2">.</span><span class="s1">sin</span><span class="s2">(</span><span class="s1">x</span><span class="s2">) - </span><span class="s1">sin_sum</span>
+<span class="s1">cos_difference </span><span class="s2">= </span><span class="s1">math</span><span class="s2">.</span><span class="s1">cos</span><span class="s2">(</span><span class="s1">x</span><span class="s2">) - </span><span class="s1">cos_sum</span>
+<span class="s1">exp_difference </span><span class="s2">= </span><span class="s1">math</span><span class="s2">.</span><span class="s1">exp</span><span class="s2">(</span><span class="s1">x</span><span class="s2">) - </span><span class="s1">exp_sum</span>
+
+<span class="s1">print</span><span class="s2">(</span><span class="s4">f&quot;math.sin(x) - sin(x) = </span><span class="s0">{</span><span class="s1">sin_difference</span><span class="s0">:</span><span class="s4">.1e</span><span class="s0">}</span><span class="s4">&quot;</span><span class="s2">)</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s4">f&quot;math.cos(x) - cos(x) = </span><span class="s0">{</span><span class="s1">cos_difference</span><span class="s0">:</span><span class="s4">.1e</span><span class="s0">}</span><span class="s4">&quot;</span><span class="s2">)</span>
+<span class="s1">print</span><span class="s2">(</span><span class="s4">f&quot;math.exp(x) - exp(x) = </span><span class="s0">{</span><span class="s1">exp_difference</span><span class="s0">:</span><span class="s4">.1e</span><span class="s0">}</span><span class="s4">&quot;</span><span class="s2">)</span>
+</pre>
+</body>
+</html>

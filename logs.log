@@ -1,0 +1,71 @@
+2024-05-06 03:30:29,768 | ERROR | Input file not found
+2024-05-06 03:32:07,277 | ERROR | Line #2: Empty line
+2024-05-06 03:32:07,278 | ERROR | Line #3: list index out of range
+2024-05-06 03:32:07,278 | ERROR | Line #4: Empty line
+2024-05-06 03:32:07,278 | ERROR | Line #5: could not convert string to float: '-5,2'
+2024-05-06 03:32:07,278 | ERROR | Line #6: Empty line
+2024-05-06 03:32:07,278 | ERROR | Line #7: list index out of range
+2024-05-06 03:32:07,278 | ERROR | Line #8: Empty line
+2024-05-06 03:32:07,278 | ERROR | Line #9: could not convert string to float: 'a+'
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #1: Invalid operation:  + 
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #2: Invalid number of parts in expression
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #3: Invalid number of parts in expression
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #4: Invalid number of parts in expression
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #5: Invalid number of parts in expression
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #6: Invalid number of parts in expression
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #7: Invalid number of parts in expression
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #8: Invalid number of parts in expression
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #9: Invalid operation: + 
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #1: Invalid operation:  + 
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #2: Invalid number of parts in expression
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #3: Invalid number of parts in expression
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #4: Invalid number of parts in expression
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #5: Invalid number of parts in expression
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #6: Invalid number of parts in expression
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #7: Invalid number of parts in expression
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #8: Invalid number of parts in expression
+2023-08-12 14:08:12.806 | ERROR | __main__:<module>:69 - Line #9: Invalid operation: + 
+Line #1: Invalid expression
+Line #1: Invalid expression
+Line #1: Invalid expression
+Line #1: Invalid expression
+Line #1: Invalid expression
+Line #1: Invalid expression
+Line #1: Invalid expression
+Line #1: Invalid expression
+Line #1: Invalid expression
+Line #1: could not convert string to float: ''
+Line #1: Invalid expression
+Line #1: could not convert string to float: ''
+Line #1: Invalid expression
+Line #1: could not convert string to float: 'a'
+Line #1: Invalid expression
+Line #1: Invalid expression
+Line #1: Invalid expression
+Line #1: could not convert string to float: ''
+Line #1: Invalid expression
+Line #1: could not convert string to float: ''
+Line #1: Invalid expression
+Line #1: could not convert string to float: 'a'
+2024-05-06 03:55:00,104 | ERROR | Line #2: Empty line
+2024-05-06 03:55:00,104 | ERROR | Line #3: list index out of range
+2024-05-06 03:55:00,104 | ERROR | Line #4: Empty line
+2024-05-06 03:55:00,104 | ERROR | Line #5: could not convert string to float: '-5,2'
+2024-05-06 03:55:00,104 | ERROR | Line #6: Empty line
+2024-05-06 03:55:00,104 | ERROR | Line #7: list index out of range
+2024-05-06 03:55:00,104 | ERROR | Line #8: Empty line
+2024-05-06 03:55:00,104 | ERROR | Line #9: could not convert string to float: 'a+'
+2024-05-06 03:56:47,382 | ERROR | Line #2: list index out of range
+2024-05-06 03:56:47,382 | ERROR | Line #3: could not convert string to float: '-5,2'
+2024-05-06 03:56:47,382 | ERROR | Line #4: list index out of range
+2024-05-06 03:56:47,382 | ERROR | Line #5: could not convert string to float: 'a+'
+2024-05-06 03:58:51,664 | ERROR | Line #2: list index out of range
+2024-05-06 03:58:51,664 | ERROR | Line #4: list index out of range
+2024-05-06 03:58:51,664 | ERROR | Line #5: could not convert string to float: 'a+'
+2024-05-06 04:01:17,206 | ERROR | Line #2: Invalid expression format
+2024-05-06 04:01:17,206 | ERROR | Line #4: Invalid expression format
+2024-05-06 04:01:17,206 | ERROR | Line #5: Invalid expression format
+2024-05-06 05:03:49,431 | ERROR | Line #-2: Неверное количество операндов и операторов: ['-2', '-3']
+2024-05-06 05:03:49,431 | ERROR | Line #-5,2: Не удалось преобразовать строку в число: could not convert string to float: '-5,2'
+2024-05-06 05:03:49,431 | ERROR | Line #-5.2: Неверное количество операндов и операторов: ['-5.2', '*4']
+2024-05-06 05:03:49,431 | ERROR | Line #a+: Неверное количество операндов и операторов: ['a+', '5']

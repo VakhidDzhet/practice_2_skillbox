@@ -1,0 +1,50 @@
+<html>
+<head>
+<title>practice_5.py</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+practice_5.py</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">re</span>
+
+<span class="s1">atomic_masses </span><span class="s2">= {</span>
+    <span class="s3">&quot;H&quot;</span><span class="s2">: </span><span class="s4">1.008</span><span class="s2">,</span>
+    <span class="s3">&quot;O&quot;</span><span class="s2">: </span><span class="s4">15.999</span><span class="s2">,</span>
+    <span class="s3">&quot;S&quot;</span><span class="s2">: </span><span class="s4">32.066</span><span class="s2">,</span>
+    <span class="s3">&quot;Na&quot;</span><span class="s2">: </span><span class="s4">22.990</span><span class="s2">,</span>
+    <span class="s3">&quot;Cl&quot;</span><span class="s2">: </span><span class="s4">35.453</span><span class="s2">,</span>
+    <span class="s3">&quot;K&quot;</span><span class="s2">: </span><span class="s4">39.098</span><span class="s2">,</span>
+<span class="s2">}</span>
+
+
+<span class="s0">def </span><span class="s1">molecular_mass</span><span class="s2">(</span><span class="s1">molecule</span><span class="s2">):</span>
+
+    <span class="s1">atoms </span><span class="s2">= </span><span class="s1">re</span><span class="s2">.</span><span class="s1">findall</span><span class="s2">(</span><span class="s3">r&quot;([A-Za-z]+)(\d*)&quot;</span><span class="s2">, </span><span class="s1">molecule</span><span class="s2">)</span>
+    <span class="s1">mass </span><span class="s2">= </span><span class="s1">sum</span><span class="s2">(</span>
+        <span class="s1">atomic_masses</span><span class="s2">[</span><span class="s1">atom</span><span class="s2">] * (</span><span class="s1">int</span><span class="s2">(</span><span class="s1">count</span><span class="s2">) </span><span class="s0">if </span><span class="s1">count </span><span class="s0">else </span><span class="s4">1</span><span class="s2">) </span><span class="s0">for </span><span class="s1">atom</span><span class="s2">, </span><span class="s1">count </span><span class="s0">in </span><span class="s1">atoms</span>
+    <span class="s2">)</span>
+    <span class="s0">return </span><span class="s1">mass</span>
+
+
+<span class="s1">molecules </span><span class="s2">= [</span><span class="s3">&quot;H2-S-O4&quot;</span><span class="s2">, </span><span class="s3">&quot;H2-O&quot;</span><span class="s2">, </span><span class="s3">&quot;Na-Cl&quot;</span><span class="s2">, </span><span class="s3">&quot;H-Cl&quot;</span><span class="s2">, </span><span class="s3">&quot;K-Cl&quot;</span><span class="s2">]</span>
+
+<span class="s1">molar_masses </span><span class="s2">= </span><span class="s1">sorted</span><span class="s2">(</span>
+    <span class="s2">((</span><span class="s1">mol</span><span class="s2">, </span><span class="s1">molecular_mass</span><span class="s2">(</span><span class="s1">mol</span><span class="s2">)) </span><span class="s0">for </span><span class="s1">mol </span><span class="s0">in </span><span class="s1">molecules</span><span class="s2">), </span><span class="s1">key</span><span class="s2">=</span><span class="s0">lambda </span><span class="s1">x</span><span class="s2">: </span><span class="s1">x</span><span class="s2">[</span><span class="s4">1</span><span class="s2">]</span>
+<span class="s2">)</span>
+
+<span class="s0">for </span><span class="s1">mol</span><span class="s2">, </span><span class="s1">mass </span><span class="s0">in </span><span class="s1">molar_masses</span><span class="s2">:</span>
+    <span class="s1">print</span><span class="s2">(</span><span class="s3">f&quot;</span><span class="s0">{</span><span class="s1">mol</span><span class="s2">.</span><span class="s1">ljust</span><span class="s2">(</span><span class="s4">10</span><span class="s2">)</span><span class="s0">} {</span><span class="s1">mass</span><span class="s0">:</span><span class="s3">.3f</span><span class="s0">}</span><span class="s3">&quot;</span><span class="s2">)</span>
+</pre>
+</body>
+</html>
